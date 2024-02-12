@@ -109,27 +109,48 @@
             <li>
                 <a href="#">Apache</a>
             </li>
-            <div class="theme-switch-container">
-                <label class="switch">
-                    <input type="checkbox" id="themeSwitch">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+            
         </ul>
-    </nav>
-
-    <section class="homeSection">
-        <div class="hamburger">
-            <a href ="#">Home</a> <a href="#">...</a>
+        <div class="theme-switch-container">
+            <div class="lightswitch lightswitchOn">
+                <div>
+                    <span class="material-symbols-outlined">
+                        lightbulb
+                    </span>
+                    <span class="material-symbols-outlined">
+                        nightlight
+                    </span>
+                </div>
+            </div>
         </div>
+    </nav>
+    <!-- link Section -->
+    <section class="linkSection currentTopic">
         <div class="sectionContent">
+        
+            <div class="subCat subCatOpen">
+            <a onclick="openSubCat()">
+                <span class="material-symbols-outlined">
+                menu
+                </span>
+            </a>
+            <a href="#downloadattri" style="--i:0.5s;">download</a>
+            <a href="#hrefattri"     style="--i:0.6s;">href</a>
+            <a href="#hreflangattri" style="--i:0.7s;">hreflang</a>
+            <a href="#mediaattri"    style="--i:0.8s;">media</a>
+            <a href="#pingattri"     style="--i:0.9s;">ping</a>
+            <a href="#referrerpolicyattri" style="--i:1s;">referrerpolicy</a>
+            <a href="#relattri"      style="--i:1.1s;">rel</a>
+            <a href="#targetattri"   style="--i:1.2s;">target</a>
+            <a href="#typeattri"     style="--i:1.3s;">type</a>
+        </div>
 
-            <h1>&lt;a&gt;&lt;/a&gt; link tag</h1>
+            <h1 id="linkSectionTop">&lt;a&gt;&lt;/a&gt; link tag</h1>
 
             <div class="codeblock">
                 <div class="htmlCode"></div>
                 <div class="result">
-                    <a href="https://tharhtetzan.netlify.app">Visit Banana Kingdom!</a>
+                    <a href="https://tharhtetzan.netlify.app"> Visit Banana Kingdom! </a>
                 </div>
             </div>
 
@@ -155,14 +176,15 @@
                 <p class="comment">/* a tag with all of its attributes*/</p>
                 <div class="htmlCode"></div>
                 <div class="result">
-                    <a href="https://www.banana.com" target="_blank" title="Visit Example.com" style="color: #0066cc; text-decoration: none; font-weight: bold;" tableindex="1" role="link" aria-label="Visit Example.com"> Click me to visit Banana Kingdom </a>
+                    <a href="https://www.banana.com" target="_blank" title="VisitExample.com" style="color:#0066cc;text-decoration:none;font-weight:bold;" tableindex="1" role="link" aria-label="VisitExample.com"> Click me to visit Banana Kingdom </a>
                 </div>
             </div>
             <hr>
 
             <h1>Attributes in &lt;a&gt;&lt;/a&gt;</h1>
-            <h4>
-                🔴 Download
+            <!-- download attribute -->
+            <h4 class="subTitle" id="downloadattri">
+                🔴 download Attribute
             </h4>
             <div class="codeblock">
                 <p class="comment">/* a tag with download attribute*/</p>
@@ -186,9 +208,276 @@
                     <a href="/banana.img" download="notbanana" > Click me to download banana pics </a>
                 </div>
             </div>
-            
+            <!-- download attribute -->
+
+            <!-- href attribute -->
+            <h4 class="subTitle" id="hrefattri">
+                🔴 href Attribute
+            </h4>
+            <div class="codeblock">
+                <p class="comment">/* a tag with href attribute*/</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="https://tharhtetzan.netlify.app"> Click me </a>
+                </div>
+            </div>
+            <div class="explanation">
+                The href attribute specifies the URL of the page the link goes to. <br>
+                If the href attribute is not present, the &lta> tag will not be a hyperlink. <br>
+                <p class="tip">Tip: You can use href="#top" or href="#" to link to the top of the current page!</p>
+            </div>
+            <div class="codeblock">
+                <p class="comment">/*Go to the top page*/</p>
+                <div class="htmlCode"></div>
+                
+                <div class="result">
+                    <a href="#"> Go to Top </a>
+                </div>
+            </div>
+            <p>You can use an image as a link</p>
+            <div class="codeblock">
+                <div class="htmlCode"></div>
+                
+                <div class="result">
+                    <a href="https://tharhtetzan.netlify.app"> <img border="0" alt="Sample image" src="sample.jpg" width="100" height="100"> </a>
+                </div>
+            </div>
+            <p>You can link to a phone number</p>
+            <div class="codeblock">
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="tel:+959441428181">  +959 441428181 </a>
+                </div>
+            </div>
+            <p>You can link to another section on the same page</p>
+            <div class="codeblock">
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="#section2"> Go to section2 </a>
+                </div>
+            </div>
+            <p>You can link to a JavaScript</p>
+            <div class="codeblock">
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="javascript:alert('Hello_World!');"> Execute JavaScript </a>
+                </div>
+            </div>
+            <!-- href attribute -->
+
+            <!-- hreflang attribute -->
+            <h4 class="subTitle" id="hreflangattri">
+                🔴 hreflang Attribute
+            </h4>
+            <div class="codeblock">
+                <p class="comment">/* a tag with hreflang attribute*/</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="https://tharhtetzan.netlify.app" hreflang="ja"> Click here </a>
+                </div>
+            </div>
+            <div class="explanation">
+                The hreflang attribute specifies the language of the linked document. <br>
+                This attribute is only used if the href attribute is set. <br>
+                <p class="note">Note: This attribute is purely advisory.</p>
+            </div>
+            <!-- hreflang attribute -->
+
+            <!-- media attribute -->
+            <h4 class="subTitle" id="mediaattri">
+                🔴 media Attribute
+            </h4>
+            <div class="codeblock">
+                <p class="comment">/* a tag with media attribute*/</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="index.html?output=print" media="print_and_(resolution:300dpi)"> Open media attribute page for print. </a>
+                </div>
+            </div>
+            <div class="explanation">
+                The media attribute specifies what media or device the linked document is optimized for. <br>
+                This attribute is used to specify that the target URL is designed for special devices (like iPhone), speech or print media. <br>
+                This attribute can accept several values. <br>
+                Only used if the href attribute is present. <br>
+                <p class="note">Note: This attribute is purely advisory.</p>
+            </div>
+            <!-- media attribute -->
+
+            <!-- ping attribute -->
+            <h4 class="subTitle" id="pingattri">
+                🔴 ping Attribute
+            </h4>
+            <div class="codeblock">
+                <p class="comment">/* a tag with ping attribute*/</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="https://tharhtetzan.netlify.app" ping="https://tharhtetzan.netlify.app/trackpings"> ping </a>
+                </div>
+            </div>
+            <div class="explanation">
+                The ping attribute specifies a list of URLs to be notified if the user follows the hyperlink. <br>
+                When the user clicks on the hyperlink, the ping attribute will send a short HTTP POST request to the specified URL. <br>
+                This attribute is useful for monitoring/tracking.
+            </div>
+            <!-- ping attribute -->
+
+            <!-- referrerpolicy attribute -->
+            <h4 class="subTitle" id="referrerpolicyattri">
+                🔴 referrerpolicy Attribute
+            </h4>
+            <div class="codeblock">
+                <p class="comment">/* a tag with referrerpolicy attribute*/</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="https://tharhtetzan.netlify.app" referrerpolicy="origin"> referrerpolicy </a>
+                </div>
+            </div>
+            <div class="explanation">
+                The referrerpolicy attribute specifies which referrer information to send when the user clicks on the hyperlink.
+            </div>
+            <div class="codeblock">
+                <p class="comment">/* a tag with all of referrerpolicy attribute*/</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="https://tharhtetzan.netlify.app" referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url">  referrerpolicy with all </a>
+                </div>
+            </div>
+            <!-- referrerpolicy attribute -->
+
+            <!-- rel attribute -->
+            <h4 class="subTitle" id="relattri">
+                🔴 rel Attribute
+            </h4>
+            <div class="codeblock">
+                <p class="comment">/* a tag with rel attribute*/</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a rel="nofollow" href="https://tharhtetzan.netlify.app"> a tag with rel attribute </a>
+                </div>
+            </div>
+            <div class="explanation">
+                The rel attribute specifies the relationship between the current document and the linked document.
+                Only used if the href attribute is present.
+                <p class="tip">Tip: Search engines can use this attribute to get more information about a link!</p>
+            </div>
+            <!-- rel attribute -->
+
+            <!-- target attribute -->
+            <h4 class="subTitle" id="targetattri">
+                🔴 target Attribute
+            </h4>
+            <div class="codeblock">
+                <p class="comment">/* a tag with rel attribute*/</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="https://tharhtetzan.netlify.app" target="_blank"> a tag with target attribute </a>
+                </div>
+            </div>
+            <div class="explanation">
+                The target attribute specifies where to open the linked document.
+            </div>
+            <div class="codeblock">
+                <p class="comment">/* data that can be used in target */</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="https://tharhtetzan.netlify.app" target="_blank|_self|_parent|_top|framename"> _blank|_self|_parent|_top|framename </a>
+                </div>
+            </div>
+            <!-- target attribute -->
+
+            <!-- type attribute -->
+            <h4 class="subTitle" id="typeattri">
+                🔴 type Attribute
+            </h4>
+            <div class="codeblock">
+                <p class="comment">/* a tag with type attribute*/</p>
+                <div class="htmlCode"></div>
+                <div class="result">
+                    <a href="https://tharhtetzan.netlify.app" type="text/html"> a tag with type attribute </a>
+                </div>
+            </div>
+            <div class="explanation">
+                The type attribute specifies the Internet media type (formerly known as MIME type) of the linked document. <br>
+                This attribute is only used if the href attribute is set. <br>
+                <p class="note">Note: This attribute is purely advisory.</p>
+            </div>
+            <!-- type attribute -->
+
+            <br>
         </div>
+        
+        <a class="goToTop" href="#linkSectionTop">
+            <span class="material-symbols-outlined">
+                arrow_upward
+            </span>
+        </a>
     </section>
+
+    <!-- List section -->
+    <section class="listSection">
+        <div class="sectionContent">
+
+            <div class="subCat subCatOpen">
+                <a onclick="openSubCat()">
+                    <span class="material-symbols-outlined">
+                    menu
+                    </span>
+                </a>
+                <a href="#downloadattri" style="--i:0.5s;">hi</a>
+                <a href="#hrefattri"     style="--i:0.6s;">hello</a>
+                <a href="#hreflangattri" style="--i:0.7s;">hreflang</a>
+                <a href="#mediaattri"    style="--i:0.8s;">media</a>
+                <a href="#pingattri"     style="--i:0.9s;">ping</a>
+                <a href="#referrerpolicyattri" style="--i:1s;">referrerpolicy</a>
+                <a href="#relattri"      style="--i:1.1s;">rel</a>
+                <a href="#targetattri"   style="--i:1.2s;">target</a>
+                <a href="#typeattri"     style="--i:1.3s;">type</a>
+            </div>
+            <h1 id="listSectionTop">&lt;li&gt;&lt;/li&gt; list tag</h1>
+
+            <div class="codeblock">
+                <p class="comment">/* A list tag example */</p>
+                <pre class="htmlCode"></pre>
+                <div class="result">
+                    <ul>
+                        <li> Item 1 </li>
+                        <li> Item 2 </li>
+                        <li> Item 3 </li>
+                     </ul>
+                </div>
+            </div>
+
+            <div class="explanation">
+                <p class="explanationTitle">Definition and Usage</p>
+                <p>
+                    HTML provides various list elements that allow you to structure and organize content. Here are some examples and tips/tricks for using HTML list tags:
+                </p>
+            </div>
+
+            <!-- Unordered List -->
+            <h4 class="subTitle">
+                🔴 Unordered List &ltul>:
+            </h4>
+            <div class="codeblock">
+                <p class="comment">/* Unordered List */</p>
+                <pre class="htmlCode"></pre>
+                <div class="result">
+                    <ul>
+                        <li> Item 1 </li>
+                        <li> Item 2 </li>
+                        <li> Item 3 </li>
+                     </ul>
+                </div>
+            </div>
+            <!-- Unordered List -->
+        </div>
+        <a class="goToTop" href="#listSectionTop">
+            <span class="material-symbols-outlined">
+                arrow_upward
+            </span>
+        </a>
+    </section>
+
     <!-- scripts -->
     <script src="main.js"></script>
 </body>
